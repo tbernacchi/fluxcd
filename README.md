@@ -1,2 +1,0 @@
-# fluxcd
-Fluxcd stuff.
