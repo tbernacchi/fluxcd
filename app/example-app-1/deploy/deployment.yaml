@@ -23,6 +23,7 @@ spec:
       containers:
       - name: example-app-1
         image: ghcr.io/tbernacchi/fluxcd/example-app-1:0.0.1 
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
         volumeMounts:
@@ -32,3 +33,5 @@ spec:
       - name: config-volume
         configMap:
           name: example-app-1
+      imagePullSecrets:
+      name: gh-registry
