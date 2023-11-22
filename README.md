@@ -1,4 +1,4 @@
-# FluxCD stuff
+# FluxCD 
 
 This is a simple fluxcd repository with a simple app to understand the tool.
 
@@ -104,7 +104,7 @@ buildah push ghcr.io/tbernacchi/fluxcd/example-app-1:0.0.1
 
 ## Fluxcd 
 
-On the the k8s cluster let's apply the CRD's:
+On the the k8s cluster let's apply the CRD's to tell flux where our Git repo is and where the YAML is.
 
 ```
 ~/fluxcd# tree infra-repo/apps/
@@ -119,10 +119,21 @@ infra-repo/apps/
 ```
 kubectl apply -f infra-repo/apps/example-app-1/gitrepository.yaml
 kubectl apply -f infra-repo/apps/example-app-1/kustomization.yaml
+
+# Check flux resources
+kubectl get GitRepository -n flux-system 
+kubectl get Kustomization -n flux-system
+
+# check deployed resources
+kubectl get all
 ```
 
-## More information
+#To access the app
+kubectl port-forward svc/example-app-1 80:80
 
+That's it. When you change your 'app/example-app-1/deploy/deployment.yaml' file fluxcd will deploy the application. This is a basic CD setup.
+
+## More information
 https://fluxcd.io/ </br> 
 https://fluxcd.io/flux/cmd/flux_bootstrap/ </br> 
 https://fluxcd.io/flux/installation/bootstrap/github/
