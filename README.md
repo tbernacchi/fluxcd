@@ -72,8 +72,8 @@ Building the image from the repo directory:
 
 ## Github container registry
 
-For this lab I've used [Github](https://docs.github.com/en/packages/working-with-a-github-packages-registry/) container registry to store the containers images. 
-You're going to need to create a token as it's mentioned [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+For this lab I've used [Github](https://docs.github.com/en/packages/working-with-a-github-packages-registry/) container registry to store the containers images. </br>
+You also are going to need to create a token as it's mentioned [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
 ```
 export GITHUB_TOKEN=<your-beautiful-token>
