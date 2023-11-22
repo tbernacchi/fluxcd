@@ -134,6 +134,7 @@ kubectl port-forward svc/example-app-1 80:80
 ```
 
 That's it. When you change your `app/example-app-1/deploy/deployment.yaml` file fluxcd will deploy the app. </br>
+
 This was a basic CD setup.
 
 ## More information
