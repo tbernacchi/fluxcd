@@ -129,9 +129,13 @@ kubectl get all
 ```
 
 #To access the app
-kubectl port-forward svc/example-app-1 80:80
 
-That's it. When you change your 'app/example-app-1/deploy/deployment.yaml' file fluxcd will deploy the application. This is a basic CD setup.
+```
+kubectl port-forward svc/example-app-1 80:80
+```
+
+That's it. When you change your `app/example-app-1/deploy/deployment.yaml` file fluxcd will deploy the app.
+This was a basic CD setup.
 
 ## More information
 https://fluxcd.io/ </br> 
