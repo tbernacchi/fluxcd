@@ -1,6 +1,8 @@
 # FluxCD 
 
-This is a simple fluxcd repository with a simple app to understand the tool.
+This is a simple fluxcd repository with a simple app to understand the tool. </br> 
+
+I followed Marcel Dempers [video](https://www.youtube.com/watch?v=X5W_706-jSY). 
 
 ## Requirements 
 * Kubernetes cluster;
