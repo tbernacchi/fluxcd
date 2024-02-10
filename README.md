@@ -139,6 +139,29 @@ That's it. When you change your `app/example-app-1/deploy/deployment.yaml` file 
 
 This was a basic CD setup.
 
+## Update
+
+To build this mongodb stateful:
+
+```
+k create -f repo/repositories.yaml
+```
+
+# Dry-run mode to check the .yamls that will be applied.
+```
+flux build kustomization mongodb-pipeline --path mongodb-pipeline/ --kustomization-file ./infra-repo/k8s/clusters/minikube/mongodb-pipeline.yaml --dry-run -n core
+```
+
+# Dry-run mode to see what resources will be applied.
+```
+flux build kustomization mongodb-pipeline --path mongodb-pipeline/ --kustomization-file ./infra-repo/k8s/clusters/minikube/mongodb-pipeline.yaml --dry-run -n core | k apply --context=minikube --server-side -f -
+```
+
+# Apply
+```
+flux build kustomization mongodb-pipeline --path mongodb-pipeline/ --kustomization-file ./infra-repo/k8s/clusters/minikube/mongodb-pipeline.yaml -n core
+```
+
 ## More information
 https://fluxcd.io/ </br> 
 https://fluxcd.io/flux/cmd/flux_bootstrap/ </br> 
