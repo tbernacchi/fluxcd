@@ -147,17 +147,17 @@ To build this mongodb stateful:
 k create -f repo/repositories.yaml
 ```
 
-# Dry-run mode to check the .yamls that will be applied.
+Dry-run mode to check the .yamls that will be applied.
 ```
 flux build kustomization mongodb-pipeline --path mongodb-pipeline/ --kustomization-file ./infra-repo/k8s/clusters/minikube/mongodb-pipeline.yaml --dry-run -n core
 ```
 
-# Dry-run mode to see what resources will be applied.
+Dry-run mode to see what resources will be applied.
 ```
 flux build kustomization mongodb-pipeline --path mongodb-pipeline/ --kustomization-file ./infra-repo/k8s/clusters/minikube/mongodb-pipeline.yaml --dry-run -n core | k apply --context=minikube --server-side -f -
 ```
 
-# Apply
+Apply
 ```
 flux build kustomization mongodb-pipeline --path mongodb-pipeline/ --kustomization-file ./infra-repo/k8s/clusters/minikube/mongodb-pipeline.yaml -n core
 ```
