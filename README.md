@@ -139,7 +139,7 @@ That's it. When you change your `app/example-app-1/deploy/deployment.yaml` file 
 
 This was a basic CD setup.
 
-## Update
+## Update - Building a HelmRelease of MongoDB/statefulset and deploy.
 
 To build this mongodb stateful:
 
