@@ -140,6 +140,7 @@ That's it. When you change your `app/example-app-1/deploy/deployment.yaml` file 
 This was a basic CD setup.
 
 ## Update - Building a HelmRelease of MongoDB/statefulset and deploy.
+> https://github.com/bitnami/charts/tree/main/bitnami/mongodb 
 
 To build this mongodb stateful:
 
